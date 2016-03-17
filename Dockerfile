@@ -1,4 +1,4 @@
-FROM mesoscloud:mesos-slave
+FROM mesoscloud/mesos-slave:0.23.0-ubuntu-14.04
 
 MAINTAINER German Schnyder <gschnyder@gmail.com>
 
