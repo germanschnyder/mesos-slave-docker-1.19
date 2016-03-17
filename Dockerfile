@@ -14,4 +14,3 @@ RUN apt-get -y install wget nano
 RUN apt-get -y install linux-image-extra-4.4.0-13-generic
 RUN apt-get -y install apparmor
 RUN apt-get -y install docker-engine=1.7.1-0~trusty
-RUN service docker start
