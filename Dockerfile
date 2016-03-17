@@ -7,4 +7,4 @@ ENV SHELL /bin/bash
 
 RUN apt-get -y purge docker-engine
 RUN apt-get -y autoremove --purge docker-engine
-RUN m -rf /var/lib/docker
+RUN rm -rf /var/lib/docker
