@@ -9,5 +9,9 @@ RUN apt-get -y purge docker-engine
 RUN apt-get -y autoremove --purge docker-engine
 RUN rm -rf /var/lib/docker
 
-RUN apt-get -y install wget
-RUN wget -qO- https://get.docker.com/ | sed 's/lxc-docker/lxc-docker-1.7.1/' | sh
+RUN apt-get update
+RUN apt-get -y install wget nano
+RUN apt-get -y install linux-image-extra-4.4.0-13-generic
+RUN apt-get -y install apparmor
+RUN apt-get -y install docker-engine=1.7.1-0~trusty
+RUN service docker start
