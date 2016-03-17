@@ -8,3 +8,6 @@ ENV SHELL /bin/bash
 RUN apt-get -y purge docker-engine
 RUN apt-get -y autoremove --purge docker-engine
 RUN rm -rf /var/lib/docker
+
+RUN apt-get -y install wget
+RUN wget -qO- https://get.docker.com/ | sed 's/lxc-docker/lxc-docker-1.7.1/' | sh
